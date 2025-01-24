@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Reset básico */
+body, h1, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 2px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    background-color: #1c5980;
+}
+
+#lista-tareas {
+    list-style-type: none;
+    margin-top: 15px;
+    padding: 0;
+    text-align: left;
+}
+
+#lista-tareas li {
+    background: #ecf0f1;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#lista-tareas li:hover {
+    background-color: #d5e7f1;
+}
+
+#lista-tareas li button {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#lista-tareas li button:hover {
+    background-color: #c0392b;
+}
+
