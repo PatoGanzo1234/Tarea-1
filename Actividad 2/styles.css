@@ -32,7 +32,6 @@ h1 {
     font-size: 24px;
     color: #2c3e50;
 }
-::shadow
 input[type="text"] {
     width: 100%;
     padding: 10px;
