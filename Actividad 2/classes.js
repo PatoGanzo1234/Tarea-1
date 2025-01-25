@@ -27,7 +27,7 @@ class GestorDeTareas {
         }
     }
 
-    marcarComoTerminada(index) {
+    TermnarTarea(index) {
         this.tarea[index].completar();
         this.render(); 
     }
@@ -53,7 +53,7 @@ class GestorDeTareas {
             
             const btnTerminar = document.createElement('button');
             btnTerminar.textContent = 'Tarea terminada';
-            btnTerminar.addEventListener('click', () => this.marcarComoTerminada(index));
+            btnTerminar.addEventListener('click', () => this.TermnarTarea(index));
 
             
             li.appendChild(btnEditar);
@@ -66,7 +66,7 @@ class GestorDeTareas {
         const nuevoNombre = prompt("Editar tarea:", this.tarea[index].nombre);
         if (nuevoNombre !== null && nuevoNombre.trim() !== "") {
             this.tarea[index].nombre = nuevoNombre.trim();
-            this.render(); // Actualiza la lista
+            this.render();
         }
     }
 }
@@ -83,5 +83,5 @@ document.getElementById('Agregar-tarea').addEventListener('click', () => {
 });
 
 document.getElementById('eliminar-tarea').addEventListener('click', () => {
-    gestor.eliminarTarea(); // Llamar al método para eliminar la última tarea
+    gestor.eliminarTarea();
 });

@@ -1,10 +1,5 @@
-*{
-    padding: 0;
-    margin: 0;
-}
 
-/* Reset básico */
-body, h1, ul, li, input, button {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,9 +17,10 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     max-width: 400px;
@@ -36,9 +32,40 @@ h1 {
     font-size: 24px;
     color: #2c3e50;
 }
+::shadow
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+}
+
+button {
+    position: relative;
+    background-color: rgba(45, 175, 88, 0.933);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
 
 input[type="text"] {
-    width: calc(100% - 22px);
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -52,24 +79,9 @@ input[type="text"]:focus {
     border-color: #3498db;
 }
 
-button {
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px 2px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
 
 button:active {
-    background-color: #1c5980;
+    background-color: #000;
 }
 
 #lista-tareas {
@@ -78,7 +90,6 @@ button:active {
     padding: 0;
     text-align: left;
 }
-
 #lista-tareas li {
     background: #ecf0f1;
     margin: 8px 0;
@@ -87,20 +98,11 @@ button:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s;
 }
 
-#lista-tareas li:hover {
-    background-color: #d5e7f1;
-}
 
 #lista-tareas li button {
     background-color: #e74c3c;
-    padding: 5px 10px;
+    padding: 7px 10px;
     font-size: 14px;
 }
-
-#lista-tareas li button:hover {
-    background-color: #c0392b;
-}
-
